@@ -2,6 +2,7 @@
   "name": "factorio-cad",
   "version": "0.0.0",
   "license": "MIT",
+  "engines" : { "node" : ">=6.0.0" },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
