@@ -49,7 +49,7 @@
       "prefix": "app",
       "styles": [
         "theme.scss",
-        "styles.scss"
+        "styles.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
