@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarNavComponent } from './sidebar-nav.component';
+import { RouterModule } from '@angular/router/src/router_module';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MatTabsModule } from '@angular/material';
 
 describe('SidebarNavComponent', () => {
   let component: SidebarNavComponent;
@@ -8,7 +11,8 @@ describe('SidebarNavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarNavComponent ]
+      declarations: [ SidebarNavComponent ],
+      imports: [RouterTestingModule, MatTabsModule]
     })
     .compileComponents();
   }));

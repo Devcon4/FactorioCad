@@ -11,7 +11,7 @@ export class BuildComponent implements OnInit {
   links: NavLink[] = [
     new NavLink('Build', '/r/(sidebar:build//editor:editor)'),
     new NavLink('Export', '/r/(sidebar:export//editor:editor)'),
-  ]
+  ];
 
   constructor() { }
 

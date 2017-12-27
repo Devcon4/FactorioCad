@@ -4,19 +4,18 @@ import { Router } from '@angular/router';
 import { UrlTree } from '@angular/router/src/url_tree';
 
 export class NavLink {
-  
-  public isActive: boolean = false;
+  public isActive = false;
   public name: string;
   public path: string | UrlTree;
   public absPath: string;
-  
+
   public nav(r: Router, list: NavLink[] = []) {
-    
+
     // Timeout to preserve animations.
     setTimeout(() => {
-      r.navigateByUrl(this.path);      
+      r.navigateByUrl(this.path);
     }, 500);
-    
+
     list.forEach(l => l.isActive = false);
     this.isActive = true;
   }
@@ -39,7 +38,7 @@ export class NavLink {
 })
 export class SidebarNavComponent implements OnInit {
   @Input() navLinks: NavLink[] = [];
-  
+
   constructor(private router: Router) {}
 
   ngOnInit() {
