@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+/*Hack to get active state showing right.*/
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #ce6632;
+}
