@@ -1,5 +1,4 @@
 <nav mat-tab-nav-bar>
-  {{navlinks | json}}
     <a mat-tab-link
       *ngFor="let link of navLinks"
       (click)="link.nav(router, navLinks)"
