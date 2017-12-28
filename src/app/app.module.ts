@@ -11,8 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { RootComponent } from './root/root.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
-import { MatTabsModule, MatSidenavModule } from '@angular/material';
+import { MatTabsModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TabListComponent } from './tab-list/tab-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     BuildComponent,
     RootComponent,
     ExportComponent,
-    SidebarNavComponent
+    SidebarNavComponent,
+    TabListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -31,7 +33,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     NoopAnimationsModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

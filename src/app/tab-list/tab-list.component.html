@@ -1,0 +1,34 @@
+<mat-tab-group>
+  <mat-tab *ngFor="let link of tabs" [label]="link">
+      <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile
+              *ngFor="let item of list[link]"
+              [colspan]="1"
+              [rowspan]="1">
+            {{item.name}}-{{link}}
+          </mat-grid-tile>
+        </mat-grid-list>
+      <mat-divider></mat-divider>
+  </mat-tab>
+</mat-tab-group>
+
+
+<!-- <nav mat-tab-nav-bar>
+  <a mat-tab-link
+     *ngFor="let link of tabs"
+     [routerLink]=""
+     [fragment]="link">
+    {{link}}
+  </a>
+</nav>
+
+<mat-list>
+  <div *ngFor="let group of list">
+    <h3 mat-subheader [id]="group.name">{{group.name}}</h3>
+    <mat-list-item *ngFor="let item of group.items">
+      <h4 mat-line>{{item.name}}</h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
+</mat-list>
+ -->
