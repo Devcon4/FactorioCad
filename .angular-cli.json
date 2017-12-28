@@ -12,6 +12,7 @@
         "favicon.ico",
         "404.html"
       ],
+      "deployUrl": "FactorioCad",
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
