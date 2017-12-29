@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavLink } from '../sidebar-nav/sidebar-nav.component';
-import { Item } from '../tab-list/tab-list.component';
+import { Item, ItemType } from '../tab-list/tab-list.component';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-build',
@@ -14,44 +15,24 @@ export class BuildComponent implements OnInit {
     new NavLink('Export', '/r/(sidebar:export//editor:editor)'),
   ];
 
-  list = {
-    'Logistics': [
-      new Item('Test-1', ''),
-      new Item('Test-2', ''),
-      new Item('Test-3', ''),
-      new Item('Test-4', ''),
-      new Item('Test-5', ''),
-      new Item('Test-6', ''),
-    ],
-    'Production': [
-      new Item('Test-1', ''),
-      new Item('Test-2', ''),
-      new Item('Test-3', ''),
-      new Item('Test-4', ''),
-      new Item('Test-5', ''),
-      new Item('Test-6', ''),
-    ],
-    'Components': [
-      new Item('Test-1', ''),
-      new Item('Test-2', ''),
-      new Item('Test-3', ''),
-      new Item('Test-4', ''),
-      new Item('Test-5', ''),
-      new Item('Test-6', ''),
-    ],
-    'Military': [
-      new Item('Test-1', ''),
-      new Item('Test-2', ''),
-      new Item('Test-3', ''),
-      new Item('Test-4', ''),
-      new Item('Test-5', ''),
-      new Item('Test-6', ''),
-    ]
+  list = {};
+  ordinalMap = {
+    'Logistics': 0,
+    'Production': 1,
+    'Components': 2,
+    'Military': 3
+
   };
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
+    this.http.get('assets/json/iconMap.json').subscribe(m => {
+      m.json().map(i => new Item(i.name, i.path, i.group)).forEach(i => {
+        this.list[ItemType[i.group]] = [...(this.list[ItemType[i.group]] || []), i];
+      });
+      console.log(this.list);
+    });
   }
 
 }

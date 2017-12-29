@@ -1,0 +1,29 @@
+.image-center {
+    display: flex;
+    justify-content: center;
+}
+
+mat-tab-group {
+    background-color: #808080;
+    margin: 8px;
+    max-width: 25vw;
+}
+
+mat-grid-tile {
+    font-size: small;
+    text-align: center;
+    transition: background-color 200ms ease-in-out;
+    
+    div {
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: darken(#808080, 10%);
+    }
+
+    &.selected {
+        background-color: darken(#808080, 20%);
+    }
+}
+

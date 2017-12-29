@@ -11,9 +11,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { RootComponent } from './root/root.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
-import { MatTabsModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule } from '@angular/material';
+import {
+  MatTabsModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatGridListModule,
+  MatTooltipModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TabListComponent } from './tab-list/tab-list.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +45,10 @@ import { TabListComponent } from './tab-list/tab-list.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpModule,
+    MatTooltipModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
