@@ -5,9 +5,374 @@
       if (redirect && redirect != location.href) {
         history.replaceState(null, null, redirect);
       }
-    })();</script><link href="FactorioCad/styles.ead29c31a0a552e24808.bundle.css" rel="stylesheet"><style ng-transition="serverApp"></style><style ng-transition="serverApp">.main[_ngcontent-c1]{height:100vh}</style><style ng-transition="serverApp">.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-opened{overflow:hidden}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:background-color,visibility}@media screen and (-ms-high-contrast:active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{-webkit-backface-visibility:hidden;backface-visibility:hidden;position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%,0,0)}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer{transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%,0,0)}.mat-drawer:not(.mat-drawer-side){box-shadow:0 8px 10px -5px rgba(0,0,0,.2),0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12)}.mat-sidenav-fixed{position:fixed}</style><style ng-transition="serverApp">.center[_ngcontent-c4]{display:-webkit-box;display:-ms-flexbox;display:flex;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}</style></head><body><app-root _nghost-c0="" ng-version="5.1.2"><router-outlet _ngcontent-c0=""></router-outlet><app-root _nghost-c1="" class="ng-star-inserted"><mat-sidenav-container _ngcontent-c1="" autosize="" class="main mat-drawer-container mat-sidenav-container" ng-reflect-autosize=""><div class="mat-drawer-backdrop"></div><mat-sidenav _ngcontent-c1="" class="sidebar mat-elevation-z8 mat-drawer mat-sidenav ng-tns-c3-0 ng-trigger ng-trigger-transform ng-star-inserted" mode="side" opened="true" tabindex="-1" ng-reflect-mode="side" ng-reflect-opened="true">
-    <router-outlet _ngcontent-c1="" name="sidebar"></router-outlet>
-  </mat-sidenav><mat-sidenav-content _ngcontent-c1="" class="editor mat-drawer-content mat-sidenav-content">
-    <router-outlet _ngcontent-c1="" name="editor"></router-outlet>
-  </mat-sidenav-content><!----></mat-sidenav-container>
-</app-root></app-root><script type="text/javascript" src="FactorioCad/inline.a7cca0f6a82de14bd04e.bundle.js"></script><script type="text/javascript" src="FactorioCad/polyfills.f039bbc7aaddeebcb9aa.bundle.js"></script><script type="text/javascript" src="FactorioCad/main.dfb5d48704b92c035349.bundle.js"></script></body></html>
+    })();</script><link href="FactorioCad/styles.ead29c31a0a552e24808.bundle.css" rel="stylesheet"><style ng-transition="serverApp"></style><style ng-transition="serverApp">.main[_ngcontent-c1]{height:100vh}</style><style ng-transition="serverApp">.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-opened{overflow:hidden}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:background-color,visibility}@media screen and (-ms-high-contrast:active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{-webkit-backface-visibility:hidden;backface-visibility:hidden;position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%,0,0)}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer{transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%,0,0)}.mat-drawer:not(.mat-drawer-side){box-shadow:0 8px 10px -5px rgba(0,0,0,.2),0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12)}.mat-sidenav-fixed{position:fixed}</style><style ng-transition="serverApp">.center[_ngcontent-c4]{display:-webkit-box;display:-ms-flexbox;display:flex;height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}</style><style ng-transition="serverApp">.mat-progress-spinner{display:block;position:relative}.mat-progress-spinner svg{position:absolute;transform:rotate(-90deg);top:0;left:0;transform-origin:center;overflow:visible}.mat-progress-spinner circle{fill:transparent;transform-origin:center;transition:stroke-dashoffset 225ms linear}.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate]{animation:mat-progress-spinner-linear-rotate 2s linear infinite}.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] circle{transition-property:stroke;animation-duration:4s;animation-timing-function:cubic-bezier(.35,0,.25,1);animation-iteration-count:infinite}.mat-progress-spinner.mat-progress-spinner-indeterminate-fallback-animation[mode=indeterminate]{animation:mat-progress-spinner-stroke-rotate-fallback 10s cubic-bezier(.87,.03,.33,1) infinite}.mat-progress-spinner.mat-progress-spinner-indeterminate-fallback-animation[mode=indeterminate] circle{transition-property:stroke}@keyframes mat-progress-spinner-linear-rotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes mat-progress-spinner-stroke-rotate-100{0%{stroke-dashoffset:268.60617px;transform:rotate(0)}12.5%{stroke-dashoffset:56.54867px;transform:rotate(0)}12.51%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(72.5deg)}25%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(72.5deg)}25.1%{stroke-dashoffset:268.60617px;transform:rotate(270deg)}37.5%{stroke-dashoffset:56.54867px;transform:rotate(270deg)}37.51%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(161.5deg)}50%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(161.5deg)}50.01%{stroke-dashoffset:268.60617px;transform:rotate(180deg)}62.5%{stroke-dashoffset:56.54867px;transform:rotate(180deg)}62.51%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(251.5deg)}75%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(251.5deg)}75.01%{stroke-dashoffset:268.60617px;transform:rotate(90deg)}87.5%{stroke-dashoffset:56.54867px;transform:rotate(90deg)}87.51%{stroke-dashoffset:56.54867px;transform:rotateX(180deg) rotate(341.5deg)}100%{stroke-dashoffset:268.60617px;transform:rotateX(180deg) rotate(341.5deg)}}@keyframes mat-progress-spinner-stroke-rotate-fallback{0%{transform:rotate(0)}25%{transform:rotate(1170deg)}50%{transform:rotate(2340deg)}75%{transform:rotate(3510deg)}100%{transform:rotate(4680deg)}}</style><style ng-transition="serverApp">.image-center[_ngcontent-c8]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}mat-tab-group[_ngcontent-c8]{background-color:gray;margin:8px;max-width:25vw}mat-grid-tile[_ngcontent-c8]{font-size:small;text-align:center;transition:background-color .2s ease-in-out}mat-grid-tile[_ngcontent-c8]   div[_ngcontent-c8]{cursor:pointer}mat-grid-tile[_ngcontent-c8]:hover{background-color:#676666}mat-grid-tile.selected[_ngcontent-c8]{background-color:#4d4d4d}</style><style ng-transition="serverApp">.mat-tab-nav-bar{overflow:hidden;position:relative;flex-shrink:0}.mat-tab-links{position:relative}.mat-tab-link{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;vertical-align:top;text-decoration:none;position:relative;overflow:hidden}.mat-tab-link:focus{outline:0;opacity:1}.mat-tab-link.mat-tab-disabled{cursor:default}@media (max-width:600px){.mat-tab-link{min-width:72px}}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:.5s cubic-bezier(.35,0,.25,1)}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}</style><style ng-transition="serverApp">.mat-tab-group{display:flex;flex-direction:column}.mat-tab-group.mat-tab-group-inverted-header{flex-direction:column-reverse}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:0;opacity:1}.mat-tab-label.mat-tab-disabled{cursor:default}@media (max-width:600px){.mat-tab-label{padding:0 12px}}@media (max-width:960px){.mat-tab-label{padding:0 12px}}.mat-tab-group[mat-stretch-tabs] .mat-tab-label{flex-basis:0;flex-grow:1}.mat-tab-body-wrapper{position:relative;overflow:hidden;display:flex;transition:height .5s cubic-bezier(.35,0,.25,1)}.mat-tab-body{top:0;left:0;right:0;bottom:0;position:absolute;display:block;overflow:hidden}.mat-tab-body.mat-tab-body-active{position:relative;overflow-x:hidden;overflow-y:auto;z-index:1;flex-grow:1}.mat-tab-group.mat-tab-group-dynamic-height .mat-tab-body.mat-tab-body-active{overflow-y:hidden}</style><style ng-transition="serverApp">.mat-tab-header{display:flex;overflow:hidden;position:relative;flex-shrink:0}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:0;opacity:1}.mat-tab-label.mat-tab-disabled{cursor:default}@media (max-width:600px){.mat-tab-label{min-width:72px}}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:.5s cubic-bezier(.35,0,.25,1)}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}.mat-tab-header-pagination{position:relative;display:none;justify-content:center;align-items:center;min-width:32px;cursor:pointer;z-index:2}.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{display:flex}.mat-tab-header-pagination-before,.mat-tab-header-rtl .mat-tab-header-pagination-after{padding-left:4px}.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(-135deg)}.mat-tab-header-pagination-after,.mat-tab-header-rtl .mat-tab-header-pagination-before{padding-right:4px}.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-before .mat-tab-header-pagination-chevron{transform:rotate(45deg)}.mat-tab-header-pagination-chevron{border-style:solid;border-width:2px 2px 0 0;content:'';height:8px;width:8px}.mat-tab-header-pagination-disabled{box-shadow:none;cursor:default}.mat-tab-label-container{display:flex;flex-grow:1;overflow:hidden;z-index:1}.mat-tab-list{flex-grow:1;position:relative;transition:transform .5s cubic-bezier(.35,0,.25,1)}.mat-tab-labels{display:flex}</style><style ng-transition="serverApp">.mat-grid-list{display:block;position:relative}.mat-grid-tile{display:block;position:absolute;overflow:hidden}.mat-grid-tile .mat-figure{top:0;left:0;right:0;bottom:0;position:absolute;display:flex;align-items:center;justify-content:center;height:100%;padding:0;margin:0}.mat-grid-tile .mat-grid-tile-footer,.mat-grid-tile .mat-grid-tile-header{display:flex;align-items:center;height:48px;color:#fff;background:rgba(0,0,0,.38);overflow:hidden;padding:0 16px;position:absolute;left:0;right:0}.mat-grid-tile .mat-grid-tile-footer>*,.mat-grid-tile .mat-grid-tile-header>*{margin:0;padding:0;font-weight:400;font-size:inherit}.mat-grid-tile .mat-grid-tile-footer.mat-2-line,.mat-grid-tile .mat-grid-tile-header.mat-2-line{height:68px}.mat-grid-tile .mat-grid-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden}.mat-grid-tile .mat-grid-list-text>*{margin:0;padding:0;font-weight:400;font-size:inherit}.mat-grid-tile .mat-grid-list-text:empty{display:none}.mat-grid-tile .mat-grid-tile-header{top:0}.mat-grid-tile .mat-grid-tile-footer{bottom:0}.mat-grid-tile .mat-grid-avatar{padding-right:16px}[dir=rtl] .mat-grid-tile .mat-grid-avatar{padding-right:0;padding-left:16px}.mat-grid-tile .mat-grid-avatar:empty{display:none}</style><style ng-transition="serverApp">.mat-tab-body-content{-webkit-backface-visibility:hidden;backface-visibility:hidden;height:100%;overflow:auto}.mat-tab-group-dynamic-height .mat-tab-body-content{overflow:hidden}</style></head><body><app-root _nghost-c0="" ng-version="5.1.2"><router-outlet _ngcontent-c0=""></router-outlet><app-root _nghost-c1="" class="ng-star-inserted"><mat-sidenav-container _ngcontent-c1="" autosize="" class="main mat-drawer-container mat-sidenav-container" ng-reflect-autosize=""><div class="mat-drawer-backdrop"></div><div tabindex="-1" class="cdk-visually-hidden cdk-focus-trap-anchor"></div><mat-sidenav _ngcontent-c1="" class="sidebar mat-elevation-z8 mat-drawer mat-sidenav ng-tns-c3-0 ng-trigger ng-trigger-transform mat-drawer-side ng-star-inserted" mode="side" opened="true" tabindex="-1" ng-reflect-mode="side" ng-reflect-opened="true" style="">
+    <router-outlet _ngcontent-c1="" name="sidebar"></router-outlet><app-build _nghost-c6="" class="ng-star-inserted" style=""><app-sidebar-nav _ngcontent-c6="" _nghost-c7="" ng-reflect-nav-links="[object Object],[object Object"><nav _ngcontent-c7="" class="mat-tab-nav-bar mat-accent" color="accent" mat-tab-nav-bar="" ng-reflect-color="accent"><div class="mat-tab-links">
+    <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><a _ngcontent-c7="" class="mat-tab-link mat-tab-label-active ng-star-inserted" mat-tab-link="" ng-reflect-active="true" aria-disabled="false" tabindex="0">
+      Build
+    </a><a _ngcontent-c7="" class="mat-tab-link ng-star-inserted" mat-tab-link="" ng-reflect-active="false" aria-disabled="false" tabindex="0">
+      Export
+    </a>
+<mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 0px;"></mat-ink-bar></div></nav>
+</app-sidebar-nav>
+
+<app-tab-list _ngcontent-c6="" _nghost-c8="" ng-reflect-list="[object Object]" ng-reflect-ordinal-map="[object Object]"><mat-tab-group _ngcontent-c8="" class="mat-elevation-z5 mat-tab-group mat-accent" color="accent" ng-reflect-color="accent"><mat-tab-header class="mat-tab-header" ng-reflect-disable-ripple="false" ng-reflect-selected-index="0"><div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple="" ng-reflect-disabled="true"><div class="mat-tab-header-pagination-chevron"></div></div><div class="mat-tab-label-container"><div class="mat-tab-list" role="tablist"><div class="mat-tab-labels"><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><div class="mat-tab-label mat-ripple mat-tab-label-active ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" ng-reflect-disabled="false" id="mat-tab-label-0-0" tabindex="0" aria-controls="mat-tab-content-0-0" aria-selected="true"><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->Logistics</div><div class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" ng-reflect-disabled="false" id="mat-tab-label-0-1" tabindex="-1" aria-controls="mat-tab-content-0-1" aria-selected="false"><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->Production</div><div class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" ng-reflect-disabled="false" id="mat-tab-label-0-2" tabindex="-1" aria-controls="mat-tab-content-0-2" aria-selected="false"><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->Components</div><div class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" ng-reflect-disabled="false" id="mat-tab-label-0-3" tabindex="-1" aria-controls="mat-tab-content-0-3" aria-selected="false"><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->Military</div></div><mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 0px;"></mat-ink-bar></div></div><div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-after mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple="" ng-reflect-disabled="true"><div class="mat-tab-header-pagination-chevron"></div></div></mat-tab-header><div class="mat-tab-body-wrapper"><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><mat-tab-body class="mat-tab-body ng-tns-c14-1 mat-tab-body-active ng-star-inserted" role="tabpanel" ng-reflect-_content="[object Object]" ng-reflect-position="0" id="mat-tab-content-0-0" aria-labelledby="mat-tab-label-0-0" ng-reflect-origin="0"><div class="mat-tab-body-content ng-trigger ng-trigger-translateTab"><!---->
+      <mat-grid-list _ngcontent-c8="" class="mat-grid-list ng-star-inserted" cols="12" rowheight="40px" ng-reflect-cols="12" ng-reflect-row-height="40px" style="height: calc(4 * (40px * 1) + (0 * 1px) + 1px * (4 - 1));"><div>
+        <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object",
+  "ng-reflect-ng-for-track-by": "function (e,t){return t.name}"
+}--><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-0" cdk-describedby-host="" ng-reflect-message="arithmetic combinator" style="left: 0; width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/arithmetic-combinator.png" alt="arithmetic combinator"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-1" cdk-describedby-host="" ng-reflect-message="big electric pole" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 1); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/big-electric-pole.png" alt="big electric pole"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" ng-reflect-message="burner inserter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 2); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/burner-inserter.png" alt="burner inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" ng-reflect-message="cargo wagon" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 3); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/cargo-wagon.png" alt="cargo wagon"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-4" cdk-describedby-host="" ng-reflect-message="constant combinator" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 4); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/constant-combinator.png" alt="constant combinator"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-5" cdk-describedby-host="" ng-reflect-message="decider combinator" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 5); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/decider-combinator.png" alt="decider combinator"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-6" cdk-describedby-host="" ng-reflect-message="express loader" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 6); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/express-loader.png" alt="express loader"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-7" cdk-describedby-host="" ng-reflect-message="express splitter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 7); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/express-splitter.png" alt="express splitter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-8" cdk-describedby-host="" ng-reflect-message="express transport belt" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 8); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/express-transport-belt.png" alt="express transport belt"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-9" cdk-describedby-host="" ng-reflect-message="express underground belt" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 9); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/express-underground-belt.png" alt="express underground belt"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-10" cdk-describedby-host="" ng-reflect-message="fast inserter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 10); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/fast-inserter.png" alt="fast inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" ng-reflect-message="fast loader" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 11); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: 0; height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/fast-loader.png" alt="fast loader"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-12" cdk-describedby-host="" ng-reflect-message="fast splitter" style="left: 0; width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/fast-splitter.png" alt="fast splitter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-13" cdk-describedby-host="" ng-reflect-message="fast transport belt" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 1); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/fast-transport-belt.png" alt="fast transport belt"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-14" cdk-describedby-host="" ng-reflect-message="fast underground belt" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 2); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/fast-underground-belt.png" alt="fast underground belt"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-15" cdk-describedby-host="" ng-reflect-message="filter inserter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 3); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/filter-inserter.png" alt="filter inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-16" cdk-describedby-host="" ng-reflect-message="inserter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 4); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/inserter.png" alt="inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-17" cdk-describedby-host="" ng-reflect-message="iron chest" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 5); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/iron-chest.png" alt="iron chest"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-18" cdk-describedby-host="" ng-reflect-message="loader" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 6); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/loader.png" alt="loader"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-19" cdk-describedby-host="" ng-reflect-message="logistic chest active provider" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 7); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/logistic-chest-active-provider.png" alt="logistic chest active provider"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-20" cdk-describedby-host="" ng-reflect-message="logistic chest buffer" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 8); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/logistic-chest-buffer.png" alt="logistic chest buffer"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-21" cdk-describedby-host="" ng-reflect-message="logistic chest passive provide" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 9); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/logistic-chest-passive-provider.png" alt="logistic chest passive provider"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-22" cdk-describedby-host="" ng-reflect-message="logistic chest requester" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 10); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/logistic-chest-requester.png" alt="logistic chest requester"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-23" cdk-describedby-host="" ng-reflect-message="logistic chest storage" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 11); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 1); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/logistic-chest-storage.png" alt="logistic chest storage"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-24" cdk-describedby-host="" ng-reflect-message="long handed inserter" style="left: 0; width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/long-handed-inserter.png" alt="long handed inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-25" cdk-describedby-host="" ng-reflect-message="medium electric pole" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 1); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/medium-electric-pole.png" alt="medium electric pole"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-26" cdk-describedby-host="" ng-reflect-message="pipe to ground" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 2); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/pipe-to-ground.png" alt="pipe to ground"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-27" cdk-describedby-host="" ng-reflect-message="pipe" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 3); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/pipe.png" alt="pipe"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-28" cdk-describedby-host="" ng-reflect-message="power switch" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 4); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/power-switch.png" alt="power switch"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-29" cdk-describedby-host="" ng-reflect-message="programmable speaker" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 5); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/programmable-speaker.png" alt="programmable speaker"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-30" cdk-describedby-host="" ng-reflect-message="pump" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 6); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/pump.png" alt="pump"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-31" cdk-describedby-host="" ng-reflect-message="rail chain signal" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 7); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/rail-chain-signal.png" alt="rail chain signal"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-32" cdk-describedby-host="" ng-reflect-message="rail signal" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 8); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/rail-signal.png" alt="rail signal"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-33" cdk-describedby-host="" ng-reflect-message="rail" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 9); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/rail.png" alt="rail"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-34" cdk-describedby-host="" ng-reflect-message="red wire" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 10); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/red-wire.png" alt="red wire"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-35" cdk-describedby-host="" ng-reflect-message="roboport" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 11); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 2); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/roboport.png" alt="roboport"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-36" cdk-describedby-host="" ng-reflect-message="small electric pole" style="left: 0; width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/small-electric-pole.png" alt="small electric pole"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-37" cdk-describedby-host="" ng-reflect-message="small lamp" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 1); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/small-lamp.png" alt="small lamp"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-38" cdk-describedby-host="" ng-reflect-message="splitter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 2); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/splitter.png" alt="splitter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-39" cdk-describedby-host="" ng-reflect-message="stack filter inserter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 3); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/stack-filter-inserter.png" alt="stack filter inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-40" cdk-describedby-host="" ng-reflect-message="stack inserter" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 4); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/stack-inserter.png" alt="stack inserter"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-41" cdk-describedby-host="" ng-reflect-message="steel chest" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 5); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/steel-chest.png" alt="steel chest"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-42" cdk-describedby-host="" ng-reflect-message="storage tank" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 6); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/storage-tank.png" alt="storage tank"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-43" cdk-describedby-host="" ng-reflect-message="train stop" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 7); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/train-stop.png" alt="train stop"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-44" cdk-describedby-host="" ng-reflect-message="transport belt" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 8); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/transport-belt.png" alt="transport belt"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-45" cdk-describedby-host="" ng-reflect-message="underground belt" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 9); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/underground-belt.png" alt="underground belt"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div><div _ngcontent-c8="" class="tile ng-star-inserted">
+          <mat-grid-tile _ngcontent-c8="" class="mat-grid-tile" ng-reflect-rowspan="1" ng-reflect-colspan="1" aria-describedby="cdk-describedby-message-46" cdk-describedby-host="" ng-reflect-message="wooden chest" style="left: calc(((8.333333333333334% - (1px * 0.9166666666666666)) + 1px) * 10); width: calc(((8.333333333333334% - (1px * 0.9166666666666666)) * 1) + (0 * 1px)); top: calc((40px + 1px) * 3); height: calc((40px * 1) + (0 * 1px));"><figure class="mat-figure">
+              <div _ngcontent-c8="">
+                <div _ngcontent-c8="" class="image-center"><img _ngcontent-c8="" src="assets/images/icons/wooden-chest.png" alt="wooden chest"></div>
+                
+            </div>
+          </figure></mat-grid-tile>
+        </div>
+      </div></mat-grid-list>
+  <!----></div></mat-tab-body><mat-tab-body class="mat-tab-body ng-tns-c14-2 ng-star-inserted" role="tabpanel" ng-reflect-_content="[object Object]" ng-reflect-position="1" id="mat-tab-content-0-1" aria-labelledby="mat-tab-label-0-1"><div class="mat-tab-body-content ng-trigger ng-trigger-translateTab"><!----></div></mat-tab-body><mat-tab-body class="mat-tab-body ng-tns-c14-3 ng-star-inserted" role="tabpanel" ng-reflect-_content="[object Object]" ng-reflect-position="2" id="mat-tab-content-0-2" aria-labelledby="mat-tab-label-0-2"><div class="mat-tab-body-content ng-trigger ng-trigger-translateTab"><!----></div></mat-tab-body><mat-tab-body class="mat-tab-body ng-tns-c14-4 ng-star-inserted" role="tabpanel" ng-reflect-_content="[object Object]" ng-reflect-position="3" id="mat-tab-content-0-3" aria-labelledby="mat-tab-label-0-3"><div class="mat-tab-body-content ng-trigger ng-trigger-translateTab"><!----></div></mat-tab-body></div></mat-tab-group>
+
+</app-tab-list></app-build>
+  </mat-sidenav><div tabindex="-1" class="cdk-visually-hidden cdk-focus-trap-anchor"></div><mat-sidenav-content _ngcontent-c1="" class="editor mat-drawer-content mat-sidenav-content" style="margin-left:0px;margin-right:0px;">
+    <router-outlet _ngcontent-c1="" name="editor"></router-outlet><app-editor _nghost-c4="" class="ng-star-inserted"><div _ngcontent-c4="" class="center">
+  <mat-spinner _ngcontent-c4="" class="mat-spinner mat-progress-spinner mat-progress-spinner-indeterminate-animation mat-accent" color="accent" mode="indeterminate" role="progressbar" ng-reflect-color="accent" style="width:100px;height:100px;"><svg focusable="false" preserveAspectRatio="xMidYMid meet" style="width:100px;height:100px;" viewBox="0 0 100 100"><circle cx="50%" cy="50%" r="45" style="animation-name:mat-progress-spinner-stroke-rotate-100;stroke-dasharray:282.7433388230814px;stroke-width:10%;"></circle></svg></mat-spinner>
+</div></app-editor>
+  </mat-sidenav-content><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></mat-sidenav-container>
+</app-root></app-root><script type="text/javascript" src="FactorioCad/inline.1f139e6ebaaba4eda294.bundle.js"></script><script type="text/javascript" src="FactorioCad/polyfills.f039bbc7aaddeebcb9aa.bundle.js"></script><script type="text/javascript" src="FactorioCad/main.0e8b0b14f977ee311c7c.bundle.js"></script><div id="cdk-describedby-message-container" aria-hidden="true" style="display: none;"><div id="cdk-describedby-message-0">arithmetic combinator</div><div id="cdk-describedby-message-1">big electric pole</div><div id="cdk-describedby-message-2">burner inserter</div><div id="cdk-describedby-message-3">cargo wagon</div><div id="cdk-describedby-message-4">constant combinator</div><div id="cdk-describedby-message-5">decider combinator</div><div id="cdk-describedby-message-6">express loader</div><div id="cdk-describedby-message-7">express splitter</div><div id="cdk-describedby-message-8">express transport belt</div><div id="cdk-describedby-message-9">express underground belt</div><div id="cdk-describedby-message-10">fast inserter</div><div id="cdk-describedby-message-11">fast loader</div><div id="cdk-describedby-message-12">fast splitter</div><div id="cdk-describedby-message-13">fast transport belt</div><div id="cdk-describedby-message-14">fast underground belt</div><div id="cdk-describedby-message-15">filter inserter</div><div id="cdk-describedby-message-16">inserter</div><div id="cdk-describedby-message-17">iron chest</div><div id="cdk-describedby-message-18">loader</div><div id="cdk-describedby-message-19">logistic chest active provider</div><div id="cdk-describedby-message-20">logistic chest buffer</div><div id="cdk-describedby-message-21">logistic chest passive provider</div><div id="cdk-describedby-message-22">logistic chest requester</div><div id="cdk-describedby-message-23">logistic chest storage</div><div id="cdk-describedby-message-24">long handed inserter</div><div id="cdk-describedby-message-25">medium electric pole</div><div id="cdk-describedby-message-26">pipe to ground</div><div id="cdk-describedby-message-27">pipe</div><div id="cdk-describedby-message-28">power switch</div><div id="cdk-describedby-message-29">programmable speaker</div><div id="cdk-describedby-message-30">pump</div><div id="cdk-describedby-message-31">rail chain signal</div><div id="cdk-describedby-message-32">rail signal</div><div id="cdk-describedby-message-33">rail</div><div id="cdk-describedby-message-34">red wire</div><div id="cdk-describedby-message-35">roboport</div><div id="cdk-describedby-message-36">small electric pole</div><div id="cdk-describedby-message-37">small lamp</div><div id="cdk-describedby-message-38">splitter</div><div id="cdk-describedby-message-39">stack filter inserter</div><div id="cdk-describedby-message-40">stack inserter</div><div id="cdk-describedby-message-41">steel chest</div><div id="cdk-describedby-message-42">storage tank</div><div id="cdk-describedby-message-43">train stop</div><div id="cdk-describedby-message-44">transport belt</div><div id="cdk-describedby-message-45">underground belt</div><div id="cdk-describedby-message-46">wooden chest</div><div id="cdk-describedby-message-47">accumulator</div><div id="cdk-describedby-message-48">assembling machine 1</div><div id="cdk-describedby-message-49">assembling machine 2</div><div id="cdk-describedby-message-50">assembling machine 3</div><div id="cdk-describedby-message-51">beacon</div><div id="cdk-describedby-message-52">boiler</div><div id="cdk-describedby-message-53">burner mining drill</div><div id="cdk-describedby-message-54">centrifuge</div><div id="cdk-describedby-message-55">chemical plant</div><div id="cdk-describedby-message-56">electric furnace</div><div id="cdk-describedby-message-57">electric mining drill</div><div id="cdk-describedby-message-58">heat boiler</div><div id="cdk-describedby-message-59">heat pipe</div><div id="cdk-describedby-message-60">lab</div><div id="cdk-describedby-message-61">nuclear reactor</div><div id="cdk-describedby-message-62">offshore pump</div><div id="cdk-describedby-message-63">oil refinery</div><div id="cdk-describedby-message-64">pumpjack</div><div id="cdk-describedby-message-65">solar panel</div><div id="cdk-describedby-message-66">steam engine</div><div id="cdk-describedby-message-67">steam turbine</div><div id="cdk-describedby-message-68">steel furnace</div><div id="cdk-describedby-message-69">stone furnace</div><div id="cdk-describedby-message-70">substation</div><div id="cdk-describedby-message-71">concrete</div><div id="cdk-describedby-message-72">green wire</div><div id="cdk-describedby-message-73">hazard concrete</div><div id="cdk-describedby-message-74">landfill</div><div id="cdk-describedby-message-75">stone brick</div><div id="cdk-describedby-message-76">artillery turret</div><div id="cdk-describedby-message-77">artillery wagon</div><div id="cdk-describedby-message-78">flamethrower turret</div><div id="cdk-describedby-message-79">gate</div><div id="cdk-describedby-message-80">gun turret</div><div id="cdk-describedby-message-81">land mine</div><div id="cdk-describedby-message-82">laser turret</div><div id="cdk-describedby-message-83">radar</div><div id="cdk-describedby-message-84">rocket silo</div><div id="cdk-describedby-message-85">stone wall</div><div id="cdk-describedby-message-86">tank</div></div></body></html>
