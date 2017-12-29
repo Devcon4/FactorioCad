@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { NavLink } from '../sidebar-nav/sidebar-nav.component';
 import { Router, ActivatedRoute } from '@angular/router';
-import { CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY } from '@angular/cdk/overlay/typings/overlay-directives';
 import { orderBy } from 'lodash';
 
 export enum ItemType {
