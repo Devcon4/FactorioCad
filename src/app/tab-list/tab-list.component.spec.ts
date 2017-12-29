@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabListComponent } from './scroll-list.component';
+import { TabListComponent } from './tab-list.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MatTabsModule, MatGridListModule, MatTooltipModule } from '@angular/material';
 
 describe('ScrollListComponent', () => {
   let component: TabListComponent;
@@ -8,7 +10,8 @@ describe('ScrollListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TabListComponent ]
+      declarations: [ TabListComponent ],
+      imports: [RouterTestingModule, MatTabsModule, MatGridListModule, MatTooltipModule]
     })
     .compileComponents();
   }));

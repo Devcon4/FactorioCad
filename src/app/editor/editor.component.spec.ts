@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditorComponent } from './editor.component';
+import { HttpModule } from '@angular/http';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 describe('EditorComponent', () => {
   let component: EditorComponent;
@@ -8,7 +10,8 @@ describe('EditorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditorComponent ]
+      declarations: [ EditorComponent ],
+      imports: [ HttpModule, MatProgressSpinnerModule ]
     })
     .compileComponents();
   }));
