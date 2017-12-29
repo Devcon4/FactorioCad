@@ -4,7 +4,9 @@ import { BuildComponent } from './build.component';
 import { SidebarNavComponent } from '../sidebar-nav/sidebar-nav.component';
 import { RouterModule } from '@angular/router/src/router_module';
 import { RouterTestingModule } from '@angular/router/testing';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule, MatListModule, MatTooltipModule, MatGridListModule } from '@angular/material';
+import { TabListComponent } from '../tab-list/tab-list.component';
+import { HttpModule } from '@angular/http';
 
 describe('BuildComponent', () => {
   let component: BuildComponent;
@@ -12,8 +14,8 @@ describe('BuildComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuildComponent, SidebarNavComponent ],
-      imports: [ RouterTestingModule, MatTabsModule ]
+      declarations: [ BuildComponent, SidebarNavComponent, TabListComponent ],
+      imports: [ RouterTestingModule, HttpModule, MatTabsModule, MatListModule, MatGridListModule, MatTooltipModule ]
     })
     .compileComponents();
   }));
