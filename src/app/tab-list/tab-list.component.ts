@@ -2,6 +2,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { NavLink } from '../sidebar-nav/sidebar-nav.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { orderBy } from 'lodash';
+import { environment } from '../../environments/environment';
 
 export enum ItemType {
   Logistics,
@@ -42,6 +43,10 @@ export class TabListComponent {
 
   trackFunc(x, i) {
     return i.name;
+  }
+
+  getUrl(url: string) {
+    return `${environment.deployUrl}/${url}`;
   }
 
   select(item: Item) {

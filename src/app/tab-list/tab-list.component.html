@@ -9,7 +9,7 @@
               [class.selected]="toggled[item.name]"
               (click)="select(item)">
               <div>
-                <div class="image-center"><img [src]="item.url" [alt]="item.name"></div>
+                <div class="image-center"><img [src]="getUrl(item.url)" [alt]="item.name"></div>
                 <!-- <p>{{item.name}}</p> -->
             </div>
           </mat-grid-tile>
