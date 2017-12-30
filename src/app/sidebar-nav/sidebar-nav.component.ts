@@ -14,7 +14,7 @@ export class NavLink {
     // Timeout to preserve animations.
     setTimeout(() => {
       r.navigateByUrl(this.path);
-    }, 500);
+    }, 0);
 
     list.forEach(l => l.isActive = false);
     this.isActive = true;

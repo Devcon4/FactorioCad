@@ -10,11 +10,6 @@ import { Http } from '@angular/http';
 })
 export class BuildComponent implements OnInit {
 
-  links: NavLink[] = [
-    new NavLink('Build', '/r/(sidebar:build//editor:editor)'),
-    new NavLink('Export', '/r/(sidebar:export//editor:editor)'),
-  ];
-
   list = {};
   ordinalMap = {
     'Logistics': 0,
@@ -26,8 +21,8 @@ export class BuildComponent implements OnInit {
 
   raw = [
     { "name": "accumulator", "path": "assets/images/icons/accumulator.png", "group": 1 },
-    { "name": "arithmetic combinator", "path": "assets/images/icons/arithmetic-combinator.png", "group": 0 },
-    { "name": "artillery turret", "path": 'assets/images/icons/artillery-turret.png', 'group': 3 },
+    { "name": 'arithmetic combinator', 'path': 'assets/images/icons/arithmetic-combinator.png', 'group': 0 },
+    { 'name': 'artillery turret', 'path': 'assets/images/icons/artillery-turret.png', 'group': 3 },
     { 'name': 'artillery wagon', 'path': 'assets/images/icons/artillery-wagon.png', 'group': 3 },
     { 'name': 'assembling machine 1', 'path': 'assets/images/icons/assembling-machine-1.png', 'group': 1 },
     { 'name': 'assembling machine 2', 'path': 'assets/images/icons/assembling-machine-2.png', 'group': 1 },

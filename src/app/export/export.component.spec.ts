@@ -11,8 +11,8 @@ describe('ExportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExportComponent, SidebarNavComponent ],
-      imports: [ RouterTestingModule, MatTabsModule ]
+      declarations: [ ExportComponent ],
+      imports: [ ]
     })
     .compileComponents();
   }));

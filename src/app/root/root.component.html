@@ -1,5 +1,6 @@
 <mat-sidenav-container autosize class="main">
   <mat-sidenav mode="side" opened="true" class="sidebar mat-elevation-z8">
+      <app-sidebar-nav [(navLinks)]="links"></app-sidebar-nav>
     <router-outlet name="sidebar"></router-outlet>
   </mat-sidenav>
   <mat-sidenav-content class="editor">

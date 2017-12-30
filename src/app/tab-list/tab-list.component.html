@@ -1,6 +1,6 @@
 <mat-tab-group color="accent" class="mat-elevation-z5">
   <mat-tab *ngFor="let link of getProps(list)" [label]="link">
-      <mat-grid-list cols="12" rowHeight="40px">
+      <mat-grid-list cols="9" rowHeight="40px">
         <div class="tile" *ngFor="let item of list[link]; trackBy: trackFunc">
           <mat-grid-tile
               [colspan]="1"

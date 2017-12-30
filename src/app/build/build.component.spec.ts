@@ -15,7 +15,7 @@ describe('BuildComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuildComponent, SidebarNavComponent, TabListComponent ],
+      declarations: [ BuildComponent, TabListComponent ],
       imports: [ RouterTestingModule, HttpModule, MatTabsModule, MatListModule, MatGridListModule, MatTooltipModule, NoopAnimationsModule ]
     })
     .compileComponents();
