@@ -7,6 +7,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MatTabsModule, MatListModule, MatTooltipModule, MatGridListModule } from '@angular/material';
 import { TabListComponent } from '../tab-list/tab-list.component';
 import { HttpModule } from '@angular/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BuildComponent', () => {
   let component: BuildComponent;
@@ -15,7 +16,7 @@ describe('BuildComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ BuildComponent, SidebarNavComponent, TabListComponent ],
-      imports: [ RouterTestingModule, HttpModule, MatTabsModule, MatListModule, MatGridListModule, MatTooltipModule ]
+      imports: [ RouterTestingModule, HttpModule, MatTabsModule, MatListModule, MatGridListModule, MatTooltipModule, NoopAnimationsModule ]
     })
     .compileComponents();
   }));
