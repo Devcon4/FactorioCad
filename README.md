@@ -1,4 +1,6 @@
 # FactorioCad
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Devcon4/FactorioCad.svg)](https://greenkeeper.io/)
 [ ![Codeship Status for Devcon4/FactorioCad](https://app.codeship.com/projects/7abf04d0-c8f7-0135-ec29-1679dadaa30a/status?branch=master)](https://app.codeship.com/projects/261643)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
