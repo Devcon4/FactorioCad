@@ -23,7 +23,6 @@ import {
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { HttpModule } from '@angular/http';
-import { PixiModule } from 'angular2pixi';
 
 @NgModule({
   declarations: [
@@ -49,8 +48,7 @@ import { PixiModule } from 'angular2pixi';
     MatGridListModule,
     HttpModule,
     MatTooltipModule,
-    MatProgressSpinnerModule,
-    PixiModule
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
