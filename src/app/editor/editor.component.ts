@@ -8,7 +8,7 @@ import { AfterViewInit } from '@angular/core';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.scss']
 })
-export class EditorComponent implements OnInit, AfterViewInit {
+export class EditorComponent implements AfterViewInit {
 
   @ViewChild('editor') editor: ElementRef;
 
