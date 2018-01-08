@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router/src/router_state';
+import { ActivatedRoute, UrlTree } from '@angular/router';
 import { Router } from '@angular/router';
-import { UrlTree } from '@angular/router/src/url_tree';
 
 export class NavLink {
   public isActive = false;
@@ -9,11 +8,12 @@ export class NavLink {
   public path: string | UrlTree;
   public absPath: string;
 
-  public nav(r: Router, list: NavLink[] = []) {
+  public nav(r: Router, qp: {[key: string]: any}, list: NavLink[] = []) {
 
     // Timeout to preserve animations.
     setTimeout(() => {
-      r.navigateByUrl(this.path);
+      console.log(qp);
+      r.navigateByUrl(this.path, {queryParams: qp});
     }, 0);
 
     list.forEach(l => l.isActive = false);
@@ -39,11 +39,14 @@ export class NavLink {
 export class SidebarNavComponent implements OnInit {
   @Input() navLinks: NavLink[] = [];
 
-  constructor(private router: Router) {}
+  private qp;
+
+  constructor(private router: Router, private ar: ActivatedRoute) {
+    this.ar.queryParams.subscribe(p => this.qp = p);
+  }
 
   ngOnInit() {
     this.navLinks.forEach(l => l.isActive = l.setIsActive(this.router));
-    console.log(this.navLinks);
   }
 
 }

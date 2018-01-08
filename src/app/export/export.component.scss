@@ -1,0 +1,51 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: calc(100% - 79px);
+    overflow: hidden;
+    
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    opacity: 0;    
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 500ms ease-out 1s;
+}
+
+textarea:hover {
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        opacity: 0.2;
+    }
+}
+ 
+textarea::-webkit-scrollbar-track {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+ 
+// textarea::-webkit-scrollbar-thumb {
+//   background-color: rgba(255, 255, 255, 0.2);
+// }
+mat-form-field {
+    width: 100%;
+}
+
+ngx-monaco-editor {
+    align-self: stretch;
+    height: calc(100% - 286px);
+}
+
+.jsonLabel {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}

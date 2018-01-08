@@ -1,3 +1,21 @@
-<p>
-  export works!
-</p>
+  <div class="body">
+    <form>
+      <mat-form-field>
+        <textarea
+          matInput
+          id="rawString"
+          name="rawString"
+          placeholder="Blueprint String"
+          matTextareaAutosize
+          matAutosizeMinRows="2"
+          matAutosizeMaxRows="12"
+          spellcheck="false"
+          [formControl]="rawStringControl"
+          (ngModelChange)="updateString($event)">
+      </textarea>
+      <!-- <mat-error *ngIf="rawStringControl.hasError('blueprint')">String is not a Blueprint</mat-error> -->
+    </mat-form-field>
+  </form>
+    <div class="jsonLabel">Blueprint Json</div>
+  <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="bs.blueprintJsonString" (onInit)="editorInit($event)"></ngx-monaco-editor>
+</div>

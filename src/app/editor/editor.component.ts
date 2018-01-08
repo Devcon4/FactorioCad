@@ -57,7 +57,6 @@ export class EditorComponent implements AfterViewInit {
   }
 
   adjustCanvasSize() {
-    console.log(this.editor);
     this.app.renderer.resize(this.editor.nativeElement.clientWidth, this.editor.nativeElement.clientHeight);
     this.drawGrid();
   }

@@ -1,7 +1,7 @@
 <nav mat-tab-nav-bar color="accent">
     <a mat-tab-link
       *ngFor="let link of navLinks"
-      (click)="link.nav(router, navLinks)"
+      (click)="link.nav(router, qp, navLinks)"
       [active]="link.isActive">
       {{link.name}}
     </a>

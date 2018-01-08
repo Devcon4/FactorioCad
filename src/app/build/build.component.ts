@@ -115,12 +115,6 @@ export class BuildComponent implements OnInit {
     this.raw.map(i => new Item(i.name, i.path, i.group)).forEach(i => {
       this.list[ItemType[i.group]] = [...(this.list[ItemType[i.group]] || []), i];
     });
-    // this.http.get('assets/json/iconMap.json').subscribe(m => {
-    //   m.json().map(i => new Item(i.name, i.path, i.group)).forEach(i => {
-    //     this.list[ItemType[i.group]] = [...(this.list[ItemType[i.group]] || []), i];
-    //   });
-    //   console.log(this.list);
-    // });
   }
 
 }

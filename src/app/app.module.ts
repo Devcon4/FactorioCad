@@ -18,12 +18,32 @@ import {
   MatListModule,
   MatGridListModule,
   MatTooltipModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatInputModule
 } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common/src/common_module';
+import { FormsModule, NG_VALIDATORS, ReactiveFormsModule } from '@angular/forms';
+import { BlueprintStringService } from './blueprint-string.service';
+import { BlueprintValidatorDirective } from './blueprint-validator.directive';
+import { ChangeDetectionStrategy } from '@angular/core';
+import { MonacoEditorModule, NgxMonacoEditorConfig } from 'ngx-monaco-editor';
 
+const monacoConfig: NgxMonacoEditorConfig = {
+  onMonacoLoad: () => {
+    (<any>window).monaco.editor.defineTheme('factorioCad', {
+      base: 'vs-dark',
+      inherit: true,
+      rules: [],
+      colors: {
+        'editor.background': '#424242',
+        'editor.lineHighlightBorder': '#303030'
+      }
+    });
+  }
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +54,8 @@ import { HttpModule } from '@angular/http';
     RootComponent,
     ExportComponent,
     SidebarNavComponent,
-    TabListComponent
+    TabListComponent,
+    BlueprintValidatorDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -48,9 +69,15 @@ import { HttpModule } from '@angular/http';
     MatGridListModule,
     HttpModule,
     MatTooltipModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MonacoEditorModule.forRoot(monacoConfig)
   ],
-  providers: [],
+  providers: [
+    BlueprintStringService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
