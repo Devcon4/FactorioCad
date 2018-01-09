@@ -2,6 +2,9 @@ import { Component, OnInit, ViewRef, ElementRef, ViewChild } from '@angular/core
 import { Http } from '@angular/http';
 import { Application, loader, Sprite, Graphics, autoDetectRenderer, Container } from 'pixi.js';
 import { AfterViewInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
+import { UrlShortenerService } from '../url-shortener.service';
+import * as copy from 'clipboard-copy';
 
 @Component({
   selector: 'app-editor',
@@ -15,11 +18,20 @@ export class EditorComponent implements AfterViewInit {
   private app: Application = new Application({transparent: true});
   private grid = new Graphics();
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private urlShortenerService: UrlShortenerService, public snackBar: MatSnackBar) {
     // http.get('assets/json/iconMap.json').subscribe(j => {
     //   this.file = j.json().map(r => ({name: r.name, path: r.path, group: r.group }));
     // });
    }
+
+   openSnackBar(message: string, action?: string) {
+     this.urlShortenerService.getCurrent((shortUrl) => {
+      copy(shortUrl);
+      this.snackBar.open(message, action, {
+        duration: 2000,
+      });
+    });
+  }
 
   ngAfterViewInit() {
     // The application will create a renderer using WebGL, if possible,

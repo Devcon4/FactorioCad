@@ -18,7 +18,9 @@ import {
   MatGridListModule,
   MatTooltipModule,
   MatProgressSpinnerModule,
-  MatInputModule
+  MatInputModule,
+  MatButtonModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TabListComponent } from './tab-list/tab-list.component';
@@ -29,6 +31,7 @@ import { BlueprintStringService } from './blueprint-string.service';
 import { BlueprintValidatorDirective } from './blueprint-validator.directive';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { MonacoEditorComponent } from './monaco-editor/monaco-editor.component';
+import { UrlShortenerService } from './url-shortener.service';
 
 @NgModule({
   declarations: [
@@ -60,9 +63,12 @@ import { MonacoEditorComponent } from './monaco-editor/monaco-editor.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [
     BlueprintStringService,
+    UrlShortenerService
   ],
   bootstrap: [AppComponent]
 })

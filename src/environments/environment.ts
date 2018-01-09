@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  deployUrl: ''
+  deployUrl: '',
+  urlShortenApiKey: 'AIzaSyChUmevsNp9-RlLMdd_Ix2iQHUQUGznvkw'
 };
