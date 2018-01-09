@@ -4,6 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { BlueprintStringService } from '../blueprint-string.service';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { blueprintValidator } from '../blueprint-validator.directive';
+import * as monaco from '@timkendrick/monaco-editor';
 
 @Component({
   selector: 'app-export',
@@ -11,34 +12,40 @@ import { blueprintValidator } from '../blueprint-validator.directive';
   styleUrls: ['./export.component.scss']
 })
 export class ExportComponent implements OnInit {
-  private rawStringControl = new FormControl(this.bs.blueprintString.getValue(), blueprintValidator());
+  rawStringControl = new FormControl(this.bs.blueprintString.getValue(), blueprintValidator());
   editorOptions = {
     theme: 'factorioCad',
     language: 'json', ReadOnly: true,
     minimap: {enabled: false},
     formatOnPaste: true,
     formatOnType: true,
-    fontSize: 10
+    fontSize: 10,
+    tabSize: 1
   };
 
-  constructor(private bs: BlueprintStringService) {}
-
-  ngOnInit() {
+  constructor(public bs: BlueprintStringService) {
+    monaco.editor.defineTheme('factorioCad', {
+      base: 'vs-dark',
+      inherit: true,
+      rules: [],
+      colors: {
+        'editor.background': '#424242',
+        'editor.lineHighlightBorder': '#303030'
+      }
+    });
   }
+
+  ngOnInit() { }
 
   updateString(val: string) {
     this.bs.blueprintString.next(val);
   }
 
   editorInit(e) {
+    e.model.updateOptions({ tabSize: 1 });
     this.bs.blueprintJson.subscribe(s => {
       setTimeout(() => {
         e.getAction('editor.action.formatDocument').run();
-      }, 100)
-    });
-    this.bs.blueprintJson.take(1).subscribe(s => {
-      setTimeout(() => {
-        e.model.updateOptions({ tabSize: 1 });
       }, 0)
     });
   }

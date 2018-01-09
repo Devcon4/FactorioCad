@@ -6,6 +6,7 @@ import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/let';
 import { Observable } from 'rxjs';
+import { Buffer } from 'buffer';
 import { unzip } from 'zlib';
 
 @Injectable()

@@ -17,5 +17,5 @@
     </mat-form-field>
   </form>
     <div class="jsonLabel">Blueprint Json</div>
-  <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="bs.blueprintJsonString" (onInit)="editorInit($event)"></ngx-monaco-editor>
+  <app-monaco-editor [options]="editorOptions" [(value)]="bs.blueprintJsonString" (onInit)="editorInit($event)"></app-monaco-editor>
 </div>

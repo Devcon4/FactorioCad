@@ -10,8 +10,7 @@
       "assets": [
         "assets/**/*",
         "favicon.ico",
-        "404.html",
-        { "glob": "**/*", "input": "../node_modules/ngx-monaco-editor/assets/monaco", "output": "./assets/monaco/" }
+        "404.html"
       ],
       "deployUrl": "FactorioCad",
       "index": "index.html",

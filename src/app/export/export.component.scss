@@ -7,37 +7,39 @@
     
 }
 
-textarea::-webkit-scrollbar {
-    width: 1em;
-}
+textarea {
+    font-size: 11px;
+    font-family: monospace;
 
-textarea::-webkit-scrollbar-thumb {
-    opacity: 0;    
-    -webkit-transition: background-color 500ms ease-out 1s;
-    -moz-transition: background-color 500ms ease-out 1s;
-    -o-transition: background-color 500ms ease-out 1s;
-    transition: background-color 500ms ease-out 1s;
-}
+    &::-webkit-scrollbar {
+        width: 1em;
+    }
 
-textarea:hover {
     &::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.2);
-        opacity: 0.2;
+        opacity: 0;    
+        -webkit-transition: background-color 500ms ease-out 1s;
+        -moz-transition: background-color 500ms ease-out 1s;
+        -o-transition: background-color 500ms ease-out 1s;
+        transition: background-color 500ms ease-out 1s;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0.2;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
     }
 }
- 
-textarea::-webkit-scrollbar-track {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-}
- 
-// textarea::-webkit-scrollbar-thumb {
-//   background-color: rgba(255, 255, 255, 0.2);
-// }
+
 mat-form-field {
     width: 100%;
 }
 
-ngx-monaco-editor {
+app-monaco-editor {
     align-self: stretch;
     height: calc(100% - 286px);
 }

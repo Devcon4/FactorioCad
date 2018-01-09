@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { ToolboxComponent } from './toolbox/toolbox.component';
 import { EditorComponent } from './editor/editor.component';
@@ -29,21 +28,8 @@ import { FormsModule, NG_VALIDATORS, ReactiveFormsModule } from '@angular/forms'
 import { BlueprintStringService } from './blueprint-string.service';
 import { BlueprintValidatorDirective } from './blueprint-validator.directive';
 import { ChangeDetectionStrategy } from '@angular/core';
-import { MonacoEditorModule, NgxMonacoEditorConfig } from 'ngx-monaco-editor';
+import { MonacoEditorComponent } from './monaco-editor/monaco-editor.component';
 
-const monacoConfig: NgxMonacoEditorConfig = {
-  onMonacoLoad: () => {
-    (<any>window).monaco.editor.defineTheme('factorioCad', {
-      base: 'vs-dark',
-      inherit: true,
-      rules: [],
-      colors: {
-        'editor.background': '#424242',
-        'editor.lineHighlightBorder': '#303030'
-      }
-    });
-  }
-}
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +41,8 @@ const monacoConfig: NgxMonacoEditorConfig = {
     ExportComponent,
     SidebarNavComponent,
     TabListComponent,
-    BlueprintValidatorDirective
+    BlueprintValidatorDirective,
+    MonacoEditorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -73,7 +60,6 @@ const monacoConfig: NgxMonacoEditorConfig = {
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MonacoEditorModule.forRoot(monacoConfig)
   ],
   providers: [
     BlueprintStringService,
