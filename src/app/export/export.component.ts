@@ -12,7 +12,7 @@ import * as monaco from '@timkendrick/monaco-editor';
   styleUrls: ['./export.component.scss']
 })
 export class ExportComponent implements OnInit {
-  rawStringControl = new FormControl(this.bs.blueprintString.getValue(), blueprintValidator());
+  rawStringControl = new FormControl(this.bs.blueprintString.getValue());
   editorOptions = {
     theme: 'factorioCad',
     language: 'json', ReadOnly: true,
