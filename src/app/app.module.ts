@@ -32,6 +32,7 @@ import { BlueprintValidatorDirective } from './blueprint-validator.directive';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { MonacoEditorComponent } from './monaco-editor/monaco-editor.component';
 import { UrlShortenerService } from './url-shortener.service';
+import { SelectedService } from './selected.service';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { UrlShortenerService } from './url-shortener.service';
   ],
   providers: [
     BlueprintStringService,
-    UrlShortenerService
+    UrlShortenerService,
+    SelectedService
   ],
   bootstrap: [AppComponent]
 })

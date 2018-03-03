@@ -3,6 +3,7 @@ import { NavLink } from '../sidebar-nav/sidebar-nav.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { orderBy } from 'lodash';
 import { environment } from '../../environments/environment';
+import { SelectedService } from '../selected.service';
 
 export enum ItemType {
   Logistics,
@@ -11,7 +12,7 @@ export enum ItemType {
   Military
 }
 
-export class Item {
+export class ImageRef {
   public name: string;
   public url: string;
   public group: ItemType;
@@ -29,12 +30,12 @@ export class Item {
   styleUrls: ['./tab-list.component.scss']
 })
 export class TabListComponent {
-  @Input() list: {[key: string]: Item[]} = {};
+  @Input() list: {[key: string]: ImageRef[]} = {};
   @Input() ordinalMap: {[key: string]: number} = {};
 
   private toggled: {[key: string]: boolean} = {};
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, private selected: SelectedService) {
   }
 
   getProps(obj: any) {
@@ -49,8 +50,9 @@ export class TabListComponent {
     return `${environment.deployUrl}/${url}`;
   }
 
-  select(item: Item) {
+  select(item: ImageRef) {
     this.toggled = {};
     this.toggled[item.name] = true;
+    this.selected.value = item;
   }
 }

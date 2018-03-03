@@ -6,5 +6,13 @@
 export const environment = {
   production: false,
   deployUrl: '',
-  urlShortenApiKey: 'AIzaSyChUmevsNp9-RlLMdd_Ix2iQHUQUGznvkw'
+  urlShortenApiKey: 'AIzaSyChUmevsNp9-RlLMdd_Ix2iQHUQUGznvkw',
+  firebase: {
+    apiKey: "AIzaSyCJMVYfKNYSTM9bBsgg2fypF5XeNkiPmh4",
+    authDomain: "factoriocad.firebaseapp.com",
+    databaseURL: "https://factoriocad.firebaseio.com",
+    projectId: "factoriocad",
+    storageBucket: "factoriocad.appspot.com",
+    messagingSenderId: "123429148303"
+  }
 };

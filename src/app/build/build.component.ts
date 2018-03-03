@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavLink } from '../sidebar-nav/sidebar-nav.component';
-import { Item, ItemType } from '../tab-list/tab-list.component';
+import { ImageRef, ItemType } from '../tab-list/tab-list.component';
 import { Http } from '@angular/http';
 
 @Component({
@@ -112,7 +112,7 @@ export class BuildComponent implements OnInit {
   constructor(private http: Http) { }
 
   ngOnInit() {
-    this.raw.map(i => new Item(i.name, i.path, i.group)).forEach(i => {
+    this.raw.map(i => new ImageRef(i.name, i.path, i.group)).forEach(i => {
       this.list[ItemType[i.group]] = [...(this.list[ItemType[i.group]] || []), i];
     });
   }

@@ -1,10 +1,13 @@
 import { Component, OnInit, ViewRef, ElementRef, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
-import { Application, loader, Sprite, Graphics, autoDetectRenderer, Container } from 'pixi.js';
+import { Application, loader, Sprite, Graphics, autoDetectRenderer, Container, Texture, Rectangle, interaction, Point } from 'pixi.js';
 import { AfterViewInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { UrlShortenerService } from '../url-shortener.service';
+import * as lerp from 'lerp';
 import * as copy from 'clipboard-copy';
+import { SelectedService } from '../selected.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-editor',
@@ -14,14 +17,29 @@ import * as copy from 'clipboard-copy';
 export class EditorComponent implements AfterViewInit {
 
   @ViewChild('editor') editor: ElementRef;
+  desiredZoom = 25;
 
   private app: Application = new Application({transparent: true});
   private grid = new Graphics();
+  private blueprint = new Container();
+  private selected: Sprite = new Sprite();
+  private lastMousePos: Point = new Point(0, 0);
 
-  constructor(private http: Http, private urlShortenerService: UrlShortenerService, public snackBar: MatSnackBar) {
+
+  constructor(
+    private http: Http,
+    private urlShortenerService: UrlShortenerService, 
+    private selectedService: SelectedService,
+    public snackBar: MatSnackBar) {
     // http.get('assets/json/iconMap.json').subscribe(j => {
     //   this.file = j.json().map(r => ({name: r.name, path: r.path, group: r.group }));
     // });
+    selectedService.asObservable().subscribe(v => {
+      var texture = Texture.fromImage(`${environment.deployUrl}/${v.url}`);
+      this.selected = new Sprite(texture);
+      this.selected.position = this.lastMousePos;
+      console.log(this.selected);
+    });
    }
 
    openSnackBar(message: string, action?: string) {
@@ -34,6 +52,11 @@ export class EditorComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    if (document.body.addEventListener){
+        document.body.addEventListener( 'mousewheel', this.zoom.bind(this), false );     // Chrome/Safari/Opera
+        document.body.addEventListener( 'DOMMouseScroll', this.zoom.bind(this), false ); // Firefox
+    }
+
     // The application will create a renderer using WebGL, if possible,
   // with a fallback to a canvas render. It will also setup the ticker
   // and the root stage PIXI.Container
@@ -43,6 +66,15 @@ export class EditorComponent implements AfterViewInit {
   this.editor.nativeElement.appendChild(this.app.view);
   setTimeout(() => {
     this.adjustCanvasSize();
+    this.app.ticker.add(e => {
+      if(this.lastMousePos.x !== this.app.renderer.plugins.interaction.mouse.global.x ||
+         this.lastMousePos.y !== this.app.renderer.plugins.interaction.mouse.global.y) {
+        this.lastMousePos = new Point(
+          this.app.renderer.plugins.interaction.mouse.global.x,
+          this.app.renderer.plugins.interaction.mouse.global.y);
+        this.drawSelected({x: this.lastMousePos.x, y: this.lastMousePos.y });
+      }
+    });
   }, 0);
   // load the texture we need
   // loader.add('accumulator', 'assets/images/icons/accumulator.png').load((l, resources) => {
@@ -73,6 +105,9 @@ export class EditorComponent implements AfterViewInit {
     this.drawGrid();
   }
 
+  drawSelected(pos: {x: number, y: number}) {
+    this.selected.position.set(pos.x, pos.y);
+  }
 
   drawGrid() {
     this.app.stage.removeChild(this.grid);
@@ -86,21 +121,27 @@ export class EditorComponent implements AfterViewInit {
     this.grid.lineTo(this.app.renderer.width, this.app.renderer.height / 2);
 
     this.grid.lineStyle(1, 0x424242, 1);
-    const rowCount = 20;
-    const rowIncrement = 500 / rowCount;
-    for (let x = 0; x < this.app.renderer.width; x++) {
-      this.grid.moveTo(rowIncrement * x, 0);
-      this.grid.lineTo(rowIncrement * x, this.app.renderer.height);
+
+    const halfWidth = this.app.renderer.width / 2;
+    const halfHeight = this.app.renderer.height / 2;
+    const cellSize = this.desiredZoom;
+    for(let x = halfWidth % cellSize - (cellSize / 2); x < this.app.renderer.width; x += cellSize) {
+      this.grid.moveTo(x, 0);
+      this.grid.lineTo(x, this.app.renderer.height);
     }
 
-    const columnCount = 20;
-    const columnIncrement = 500 / columnCount;
-    for (let y = 0; y < this.app.renderer.height; y++) {
-      this.grid.moveTo(0, columnIncrement * y);
-      this.grid.lineTo(this.app.renderer.width, columnIncrement * y);
+    for(let y = halfHeight % cellSize - (cellSize / 2); y < this.app.renderer.height; y += cellSize) {
+      this.grid.moveTo(0, y);
+      this.grid.lineTo(this.app.renderer.width, y);
     }
 
     this.grid.endFill();
     this.app.stage.addChild(this.grid);
+  }
+
+  zoom(event: MouseWheelEvent){
+    let newZoom = this.desiredZoom + (event.wheelDelta / 200);
+    if (newZoom > 1) { this.desiredZoom = newZoom; }
+    this.adjustCanvasSize();
   }
 }

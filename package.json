@@ -12,7 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod; gh-pages -d dist -m 'Manual Deploy [skip-ci]'"
+    "deploy": "ng build --prod ;gh-pages -d dist -m 'Manual Deploy [skip-ci]';"
   },
   "private": true,
   "dependencies": {
@@ -47,8 +47,10 @@
     "@types/pixi.js": "^4.6.2",
     "@types/validator": "^6.3.0",
     "angular2-template-loader": "^0.6.2",
+    "angularfire2": "^5.0.0-rc.4",
     "clipboard-copy": "^1.2.0",
     "codelyzer": "^4.0.1",
+    "firebase": "^4.8.2",
     "gh-pages": "^1.1.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
@@ -58,6 +60,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lerp": "^1.0.3",
     "lodash": "^4.17.4",
     "monaco-editor": "^0.10.1",
     "pixi.js": "^4.6.2",
