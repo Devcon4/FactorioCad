@@ -17,7 +17,7 @@ import { environment } from '../../environments/environment';
 export class EditorComponent implements AfterViewInit {
 
   @ViewChild('editor') editor: ElementRef;
-  desiredZoom = 25;
+  desiredZoom = 1;
 
   private app: Application = new Application({transparent: true});
   private grid = new Graphics();
@@ -25,20 +25,24 @@ export class EditorComponent implements AfterViewInit {
   private selected: Sprite = new Sprite();
   private lastMousePos: Point = new Point(0, 0);
 
-
   constructor(
     private http: Http,
-    private urlShortenerService: UrlShortenerService, 
+    private urlShortenerService: UrlShortenerService,
     private selectedService: SelectedService,
     public snackBar: MatSnackBar) {
     // http.get('assets/json/iconMap.json').subscribe(j => {
     //   this.file = j.json().map(r => ({name: r.name, path: r.path, group: r.group }));
     // });
-    selectedService.asObservable().subscribe(v => {
-      var texture = Texture.fromImage(`${environment.deployUrl}/${v.url}`);
+    this.selectedService._innerObservable.subscribe(v => {
+      this.app.stage.removeChild(this.selected);
+      const texture = Texture.fromImage(`${environment.deployUrl}/${v.url}`);
       this.selected = new Sprite(texture);
-      this.selected.position = this.lastMousePos;
+      this.selected.position.set(this.lastMousePos.x, this.lastMousePos.y);
+      this.selected.anchor.set(0.5, 0.5);
+      this.selected.scale.set(this.desiredZoom, this.desiredZoom);
+      // this.selected.alpha = .4;
       console.log(this.selected);
+      this.app.stage.addChild(this.selected);
     });
    }
 
@@ -52,7 +56,7 @@ export class EditorComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (document.body.addEventListener){
+    if (document.body.addEventListener) {
         document.body.addEventListener( 'mousewheel', this.zoom.bind(this), false );     // Chrome/Safari/Opera
         document.body.addEventListener( 'DOMMouseScroll', this.zoom.bind(this), false ); // Firefox
     }
@@ -67,7 +71,7 @@ export class EditorComponent implements AfterViewInit {
   setTimeout(() => {
     this.adjustCanvasSize();
     this.app.ticker.add(e => {
-      if(this.lastMousePos.x !== this.app.renderer.plugins.interaction.mouse.global.x ||
+      if (this.lastMousePos.x !== this.app.renderer.plugins.interaction.mouse.global.x ||
          this.lastMousePos.y !== this.app.renderer.plugins.interaction.mouse.global.y) {
         this.lastMousePos = new Point(
           this.app.renderer.plugins.interaction.mouse.global.x,
@@ -103,6 +107,7 @@ export class EditorComponent implements AfterViewInit {
   adjustCanvasSize() {
     this.app.renderer.resize(this.editor.nativeElement.clientWidth, this.editor.nativeElement.clientHeight);
     this.drawGrid();
+    this.selected.scale.set(this.desiredZoom, this.desiredZoom);
   }
 
   drawSelected(pos: {x: number, y: number}) {
@@ -124,24 +129,24 @@ export class EditorComponent implements AfterViewInit {
 
     const halfWidth = this.app.renderer.width / 2;
     const halfHeight = this.app.renderer.height / 2;
-    const cellSize = this.desiredZoom;
-    for(let x = halfWidth % cellSize - (cellSize / 2); x < this.app.renderer.width; x += cellSize) {
+    const cellSize = this.desiredZoom * 25;
+    for (let x = halfWidth % cellSize - (cellSize / 2); x < this.app.renderer.width; x += cellSize) {
       this.grid.moveTo(x, 0);
       this.grid.lineTo(x, this.app.renderer.height);
     }
 
-    for(let y = halfHeight % cellSize - (cellSize / 2); y < this.app.renderer.height; y += cellSize) {
+    for (let y = halfHeight % cellSize - (cellSize / 2); y < this.app.renderer.height; y += cellSize) {
       this.grid.moveTo(0, y);
       this.grid.lineTo(this.app.renderer.width, y);
     }
 
     this.grid.endFill();
-    this.app.stage.addChild(this.grid);
+    this.app.stage.addChildAt(this.grid, this.app.stage.children.length - 1);
   }
 
-  zoom(event: MouseWheelEvent){
-    let newZoom = this.desiredZoom + (event.wheelDelta / 200);
-    if (newZoom > 1) { this.desiredZoom = newZoom; }
+  zoom(event: MouseWheelEvent) {
+    const newZoom = this.desiredZoom + (event.wheelDelta / 200);
+    if (newZoom > .15) { this.desiredZoom = newZoom; }
     this.adjustCanvasSize();
   }
 }
