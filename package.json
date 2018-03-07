@@ -12,7 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod ;gh-pages -d dist -m 'Manual Deploy [skip-ci]';"
+    "deploy": "ng build --prod -build-optimizer=false ;gh-pages -d dist -m 'Manual Deploy [skip-ci]';"
   },
   "private": true,
   "dependencies": {
@@ -67,7 +67,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2",
+    "typescript": "^2.7.2",
     "validator": "^9.2.0",
     "wallaby-webpack": "^3.9.3",
     "zlib": "^1.0.5"
