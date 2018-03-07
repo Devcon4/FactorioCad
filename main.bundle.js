@@ -75,14 +75,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', redirectTo: '/factorioCad/(sidebar:build//editor:editor)', pathMatch: 'full' },
+    { path: '', redirectTo: '/FactorioCad/(sidebar:build//editor:editor)', pathMatch: 'full' },
     { path: 'FactorioCad', component: __WEBPACK_IMPORTED_MODULE_5__root_root_component__["a" /* RootComponent */], children: [
             { path: 'build', component: __WEBPACK_IMPORTED_MODULE_2__build_build_component__["a" /* BuildComponent */], outlet: 'sidebar' },
             { path: 'export', component: __WEBPACK_IMPORTED_MODULE_3__export_export_component__["a" /* ExportComponent */], outlet: 'sidebar' },
             { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_4__editor_editor_component__["a" /* EditorComponent */], outlet: 'editor' }
         ] },
     // Todo: Fix this later.
-    { path: '**', redirectTo: '/factorioCad/(sidebar:build//editor:editor)', pathMatch: 'full' },
+    { path: '**', redirectTo: '/FactorioCad/(sidebar:build//editor:editor)', pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
