@@ -649,7 +649,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".center {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 100vh;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\ndiv {\n  height: 100vh;\n  overflow: hidden; }\n\nbutton {\n  position: absolute;\n  bottom: 15px;\n  right: 15px; }\n", ""]);
+exports.push([module.i, ".center {\n  display: -ms-flexbox;\n  display: flex;\n  height: 100vh;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-flex-align: center;\n      align-items: center; }\n\ndiv {\n  height: 100vh;\n  overflow: hidden; }\n\nbutton {\n  position: absolute;\n  bottom: 15px;\n  right: 15px; }\n", ""]);
 
 // exports
 
@@ -845,7 +845,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  padding: 15px;\n  height: calc(100% - 79px);\n  overflow: hidden; }\n\ntextarea {\n  font-size: 11px;\n  font-family: monospace; }\n  textarea::-webkit-scrollbar {\n    width: 1em; }\n  textarea::-webkit-scrollbar-thumb {\n    opacity: 0;\n    transition: background-color 500ms ease-out 1s; }\n  textarea:hover::-webkit-scrollbar-thumb {\n    background-color: rgba(255, 255, 255, 0.2);\n    opacity: 0.2; }\n  textarea::-webkit-scrollbar-track {\n    border-left: 1px solid rgba(255, 255, 255, 0.2); }\n\nmat-form-field {\n  width: 100%; }\n\napp-monaco-editor {\n  -ms-flex-item-align: stretch;\n      -ms-grid-row-align: stretch;\n      align-self: stretch;\n  height: calc(100% - 214px); }\n\n.jsonLabel {\n  font-family: Arial, Helvetica, sans-serif;\n  color: rgba(255, 255, 255, 0.7);\n  font-size: 14px;\n  font-weight: 500;\n  margin-bottom: 5px; }\n", ""]);
+exports.push([module.i, ".body {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 15px;\n  height: calc(100% - 79px);\n  overflow: hidden; }\n\ntextarea {\n  font-size: 11px;\n  font-family: monospace; }\n  textarea::-webkit-scrollbar {\n    width: 1em; }\n  textarea::-webkit-scrollbar-thumb {\n    opacity: 0;\n    transition: background-color 500ms ease-out 1s; }\n  textarea:hover::-webkit-scrollbar-thumb {\n    background-color: rgba(255, 255, 255, 0.2);\n    opacity: 0.2; }\n  textarea::-webkit-scrollbar-track {\n    border-left: 1px solid rgba(255, 255, 255, 0.2); }\n\nmat-form-field {\n  width: 100%; }\n\napp-monaco-editor {\n  -ms-flex-item-align: stretch;\n      -ms-grid-row-align: stretch;\n      align-self: stretch;\n  height: calc(100% - 214px); }\n\n.jsonLabel {\n  font-family: Arial, Helvetica, sans-serif;\n  color: rgba(255, 255, 255, 0.7);\n  font-size: 14px;\n  font-weight: 500;\n  margin-bottom: 5px; }\n", ""]);
 
 // exports
 
@@ -1065,7 +1065,7 @@ var MonacoEditorComponent = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", typeof (_a = ((_b = (typeof __WEBPACK_IMPORTED_MODULE_1__timkendrick_monaco_editor__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__timkendrick_monaco_editor__).editor) && _b).IEditorOptions) === "function" && _a || Object)
+        __metadata("design:type", Object)
     ], MonacoEditorComponent.prototype, "options", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -1092,7 +1092,6 @@ var MonacoEditorComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MonacoEditorComponent);
     return MonacoEditorComponent;
-    var _b, _a;
 }());
 
 
@@ -1321,7 +1320,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".image-center {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\nmat-tab-group {\n  background-color: #808080;\n  margin: 8px;\n  width: 320px; }\n\nmat-grid-tile {\n  font-size: small;\n  text-align: center;\n  transition: background-color 200ms ease-in-out; }\n  mat-grid-tile div {\n    cursor: pointer; }\n  mat-grid-tile:hover {\n    background-color: #676666; }\n  mat-grid-tile.selected {\n    background-color: #4d4d4d; }\n", ""]);
+exports.push([module.i, ".image-center {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\nmat-tab-group {\n  background-color: #808080;\n  margin: 8px;\n  width: 320px; }\n\nmat-grid-tile {\n  font-size: small;\n  text-align: center;\n  transition: background-color 200ms ease-in-out; }\n  mat-grid-tile div {\n    cursor: pointer; }\n  mat-grid-tile:hover {\n    background-color: #676666; }\n  mat-grid-tile.selected {\n    background-color: #4d4d4d; }\n", ""]);
 
 // exports
 
