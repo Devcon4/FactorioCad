@@ -13,19 +13,19 @@ import { remove } from 'lodash';
 import { Action } from './Action';
 
 @Injectable()
-export class BlueprintStringService extends Action<String> { }
+export class BlueprintStringService { 
 
-  // public blueprintString: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  // public blueprintJson: Observable<any> = this.blueprintString.let(deflatePipe());
-  // public blueprintJsonString = '';
+  public blueprintString: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  public blueprintJson: Observable<any> = this.blueprintString.let(deflatePipe());
+  public blueprintJsonString = '';
 
-  // constructor(private router: Router, private ar: ActivatedRoute) {
-  //   this.blueprintString.subscribe(s => this.router.navigate([], {queryParams: {'string': s}}));
-  //   this.ar.queryParams.take(1).filter(p => p['string']).subscribe(p => this.blueprintString.next(p['string']));
-  //   // this.blueprintJson.subscribe(s => console.log(s));
-  //   this.blueprintJson.map(v => v.toString()).subscribe(s => this.blueprintJsonString = s || ' ');
-  // }
-// }
+  constructor(private router: Router, private ar: ActivatedRoute) {
+    this.blueprintString.subscribe(s => this.router.navigate([], {queryParams: {'string': s}}));
+    this.ar.queryParams.take(1).filter(p => p['string']).subscribe(p => this.blueprintString.next(p['string']));
+    // this.blueprintJson.subscribe(s => console.log(s));
+    this.blueprintJson.map(v => v.toString()).subscribe(s => this.blueprintJsonString = s || ' ');
+  }
+}
 
 export const deflatePipe = () => <T extends string>(source: Observable<T>) => new Observable(observer => {
   return source.subscribe({
